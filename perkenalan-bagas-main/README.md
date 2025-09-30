@@ -1,2 +1,0 @@
-# perkenalan-bagas
-HALLO WORLD

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perkenalan Diri</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            color: #fff;
+            background: #000;
+        }
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, #000, #111, #000);
+            z-index: -2;
+        }
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            z-index: -1;
+        }
+        .stars::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.w3schools.com/w3images/stars.png') repeat;
+            opacity: 0.5;
+            animation: starfield 60s linear infinite;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            max-width: 700px;
+            margin: 100px auto;
+            text-align: center;
+            position: relative;
+            overflow-y: auto;
+            max-height: 80vh;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid #87CEFA; /* Biru langit border */
+            box-shadow: 0 0 15px rgba(135,206,250,0.8); /* Biru langit glow */
+        }
+        h1 {
+            color: #87CEFA;
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 0 0 10px #87CEFA, 0 0 20px #87CEFA, 0 0 30px #87CEFA;
+        }
+        p, h2 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .education {
+            font-size: 1.2em;
+            color: #87CEFA;
+            margin: 20px 0;
+            text-shadow: 0 0 5px #87CEFA;
+        }
+        .education p {
+            margin: 5px 0;
+        }
+        .hobbies, .contact, .kuliah {
+            text-align: left;
+            margin: 20px 0;
+        }
+        .hobbies ul {
+            list-style: none;
+            padding: 0;
+        }
+        .hobbies li {
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            transition: background 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+        .hobbies li:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+        .kuliah ul {
+            list-style: none;
+            padding: 0;
+        }
+        .kuliah li {
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            transition: background 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+        .kuliah li:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+        .emoji {
+            font-size: 1.5em;
+        }
+        .button {
+            background-color: #87CEFA;
+            color: #333;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .button:hover {
+            background-color: #87CEFA;
+            transform: scale(1.05);
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            color: #87CEFA;
+            text-decoration: none;
+            font-size: 1.5em;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #87CEFA;
+            text-decoration: underline;
+        }
+        .social-links img {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+            transition: transform 0.3s;
+        }
+        .social-links img:hover {
+            transform: scale(1.1);
+        }
+        @keyframes starfield {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="stars"></div>
+    <div class="container">
+        <img src="https://i.pinimg.com/474x/3f/a7/19/3fa71949e415c51b7fdc83f2423342bf.jpg" alt="Foto Profil" class="profile-photo">
+        <h1 id="intro-heading"> Halo! Saya Bagas </h1>
+        <p id="intro-age">👤 Usia: 19</p>
+        <p id="intro-location">📍 Tempat Tinggal: Karawang</p>
+        <p id="intro-profession">💼 Pekerjaan: Mahasiswa</p>
+        <p id="intro-background">🌍 Latar Belakang: Saat ini saya sedang mempelajari Ilmu Komputer dan menjelajahi berbagai bidang di teknologi. Saya sangat bersemangat tentang coding dan inovasi.</p>
+
+        <div class="education">
+            <h2>Pendidikan</h2>
+            <p><strong>KULIAH:</strong> Universitas Buana Perjuangan Karawang</p>
+            <p><strong>SMA:</strong> SMA Negeri 6 Karawang</p>
+            <p><strong>SMP:</strong> SMP Negeri 5 Karawang</p>
+            <p><strong>SD:</strong> SD Karawang Wetan 1</p>
+        </div>
+        <div class="hobbies">
+            <h2>🚀 Hobi Saya:</h2>
+            <ul id="hobbies-list">
+            </ul>
+        </div>
+
+        <div class="kuliah">
+            <h2>🎓 Kuliah:</h2>
+            <p id="kuliah-info">Saya sedang menempuh pendidikan di Universitas Buana Perjuangan Karawang.</p><p id="kuliah-info">Saya mengambil jurusan Teknik Informatika dan memiliki minat dalam bidang teknologi.</p>
+                <a href="https://ubpkarawang.ac.id/" target="_blank" class="button">Website UBP</a>
+                
+        </div>
+        
+        <div class="contact">
+            <h2>📬 Kontak:</h2>
+            <p id="contact-info">Jangan ragu untuk menghubungi saya melalui media sosial atau email.</p>
+            <div class="social-links">
+                <a href="bagaswarda005@gmail.com" target="_blank"> 
+                    <img src="https://i.pinimg.com/474x/82/e0/ad/82e0ad824b427e97be4758a182cd2c8e.jpg" alt="Gmail">
+                </a>    
+                <a href="https://www.instagram.com/xxbagasss/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+                <a href="https://ubpkarawang.ac.id/" target="_blank">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.s5LAvHgEqonX55ygXrIt9gAAAA?pid=Api&P=0&h=180" alt="UBP">
+                </a>
+            </div>
+        </div>
+        
+        <a href="index.html" class="button">Kembali ke Halaman Utama</a>
+    </div>
+
+    <script>
+        const hobbies = [
+            { name: "Coding 🔥", ref: "https://codingstudio.id/blog/coding-adalah-pengertian-dan-kegunaannya/" },
+            { name: "Bermain Futsal ⚽", ref: "https://id.wikipedia.org/wiki/Sepak_bola" },
+            { name: "Mencari Cindo Islam  🚀", ref: "https://www.instagram.com/jkt48.erine?igsh=djNjdWl1cmZzcXdn" }
+        ];
+
+        function populateHobbies() {
+            const hobbiesList = document.getElementById('hobbies-list');
+            hobbies.forEach(hobby => {
+                const li = document.createElement('li');
+                li.textContent = hobby.name;
+                li.onclick = () => window.open(hobby.ref, '_blank');
+                hobbiesList.appendChild(li);
+            });
+        }
+
+        populateHobbies();
+    </script>
+</body>
+</html>
